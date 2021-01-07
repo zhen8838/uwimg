@@ -29,7 +29,7 @@ ifeq ($(DEBUG), 1)
 OPTS=-O0 -g
 COMMON= -Iinclude/ -Isrc/ 
 else
-CFLAGS+= -flto
+CFLAGS+= 
 endif
 
 CFLAGS+=$(OPTS)
