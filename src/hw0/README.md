@@ -37,7 +37,7 @@ You'll be modifying the file `src/hw0/process_image.c`. We've also included a py
     
 after you make any changes to the code. Then you can quickly test your changes by running:
 
-    ./uwimg test
+    ./uwimg test hw0
 
 You can also try running the example python code to generate some images:
 
