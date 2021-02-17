@@ -26,7 +26,7 @@ We'll need spatial and temporal gradient information for the flow equations. Cal
 
 ### 4.3.2 Calculating velocity from the structure matrix ###
 
-Fill in `velocity_image` to use the equation to calculate the velocity of each pixel in the x and y direction. For each pixel, fill in the `matrix M`, invert it, and use it to calculate the velocity.
+Fill in `velocity_image` to use the equation to calculate the velocity of each pixel in the x and y direction. For each pixel, fill in the `matrix M`, invert it, and use it to calculate the velocity. Note: the structure matrix may not be invertible. Make sure you check the return value and set the velocity to zero if the matrix is not invertible (this usually happens when there is no gradient i.e. all pixels in a region are the same color).
 
 Try calculating the optical flow between two dog images:
 
