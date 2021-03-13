@@ -1,5 +1,5 @@
 #include <math.h>
-#include <stdlib.h>
+#include <cstdlib>
 #include "image.h"
 #include "matrix.h"
 

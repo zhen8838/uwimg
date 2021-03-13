@@ -1,5 +1,5 @@
 #include <math.h>
-#include <string.h>
+#include <cstring>
 #include "image.h"
 #include "test.h"
 #include "args.h"

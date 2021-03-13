@@ -1,6 +1,6 @@
 #ifndef TEST_H
 #define TEST_H
-#include <stdio.h>
+#include <cstdio>
 #define EPS .002
 extern int tests_total;
 extern int tests_fail;

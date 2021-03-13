@@ -1,7 +1,7 @@
 #ifdef OPENCV
 
-#include "stdio.h"
-#include "stdlib.h"
+#include "cstdio"
+#include "cstdlib"
 #include "opencv2/opencv.hpp"
 #include "image.h"
 

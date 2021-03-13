@@ -13,7 +13,7 @@ EXEC=uwimg
 OBJDIR=./obj/
 
 CC=gcc
-CPP=g++ -std=c++11 
+CPP=g++
 AR=ar
 ARFLAGS=rcs
 OPTS=-Ofast
@@ -50,16 +50,16 @@ all: obj $(SLIB) $(ALIB) $(EXEC)
 
 
 $(EXEC): $(EXOBJS) $(OBJS)
-	$(CC) $(COMMON) $(CFLAGS) $^ -o $@ $(LDFLAGS) 
+	$(CPP) $(COMMON) $(CFLAGS) $^ -o $@ $(LDFLAGS) 
 
 $(ALIB): $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
 
 $(SLIB): $(OBJS)
-	$(CC) $(CFLAGS) -shared $^ -o $@ $(LDFLAGS)
+	$(CPP) $(CFLAGS) -shared $^ -o $@ $(LDFLAGS)
 
-$(OBJDIR)%.o: %.c $(DEPS)
-	$(CC) $(COMMON) $(CFLAGS) -c $< -o $@
+$(OBJDIR)%.o: %.cc $(DEPS)
+	$(CPP) $(COMMON) $(CFLAGS) -c $< -o $@
 
 $(OBJDIR)%.o: %.cpp $(DEPS)
 	$(CPP) $(COMMON) $(CFLAGS) -c $< -o $@

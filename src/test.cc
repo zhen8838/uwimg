@@ -1,6 +1,6 @@
-#include <stdlib.h>
+#include <cstdlib>
 #include <math.h>
-#include <string.h>
+#include <cstring>
 #include <assert.h>
 #include "matrix.h"
 #include "image.h"
@@ -494,7 +494,7 @@ void test_projection()
 
 void test_compute_homography()
 {
-    match *m = calloc(4, sizeof(match));
+    match *m = (match*)calloc(4, sizeof(match));
     m[0].p = make_point(0,0);
     m[0].q = make_point(10,10);
     m[1].p = make_point(3,3);
